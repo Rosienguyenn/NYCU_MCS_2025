@@ -1,5 +1,7 @@
 run:
 	irun ../00_TESTBED/tb_3to8dec.v  -debug  -notimingchecks -loadpli1 debpli:novas_pli_boot
+run1:	
+	irun ../00_TESTBED/tb_6to64dec.v -debug  -notimingchecks -loadpli1 debpli:novas_pli_boot
 clean:
 	rm -rf INCA_libs nWaveLog
 	rm -rf *.fsdb
@@ -17,9 +19,4 @@ clean:
 	rm -rf novas*
 	rm -rf irun*
 
-run1:	
-	irun ../00_TESTBED/tb_6to64dec.v -debug  -notimingchecks -loadpli1 debpli:novas_pli_boot
-runtest:
-	irun ../00_TESTBED/tb1_3to8dec.v -debug  -notimingchecks -loadpli1 debpli:novas_pli_boot
-        
          

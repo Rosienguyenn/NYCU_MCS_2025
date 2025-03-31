@@ -6,8 +6,7 @@ module dec_6to64(
 );
 
 //Split addresses into 2 parts
-wire [2:0] msb;
-wire [2:0] lsb;
+wire [2:0] msb, lsb;
 assign msb = addr[5:3];
 assign lsb = addr[2:0];
  	

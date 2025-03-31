@@ -10,14 +10,14 @@ wire [2:0] msb, lsb;
 assign msb = addr[5:3];
 assign lsb = addr[2:0];
  	
-//MSB decoder with 8 enable signals connecting to 8 LSB decoders 
+//Create MSB decoder with 8 enable signals connecting to 8 LSB decoders 
 wire [7:0] msb_en;
 dec_3to8 msb_decoder(
 	.a(msb),
 	.word(msb_en)
 );
 	
-//8 groups of LSB decoders
+//Create a group of 8 LSB decoders
 wire [63:0] wl_temp;
 
 genvar i;
